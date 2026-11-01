@@ -1,0 +1,318 @@
+{
+  "documents": [
+    "docs/SortingTheorem.md",
+    "docs/SortingTheorem.zh-CN.md"
+  ],
+  "snippets": [
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Theorem.lean",
+      "start": "theorem theorem_3_1",
+      "stop": "\n\nend "
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "def NormalGuarantee",
+      "stop": "\ntheorem normal_complete"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "def SmallGuarantee",
+      "stop": "\ntheorem small_complete"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "def coefficient",
+      "stop": "\ntheorem coefficient_positive"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/LargeMemory.lean",
+      "start": "def factor",
+      "stop": "\ntheorem coefficient_eq"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "theorem factor_eq",
+      "stop": "\nprivate theorem increase_constant"
+    },
+    {
+      "path": "CodedSorting/Shared/Words/WordConvention.lean",
+      "start": "def Covers",
+      "stop": "\ntheorem covers_capacity"
+    },
+    {
+      "path": "CodedSorting/Shared/Words/WordConvention.lean",
+      "start": "abbrev Word (w",
+      "stop": "\nabbrev Words "
+    },
+    {
+      "path": "CodedSorting/Circuit/Parameters/Exponent.lean",
+      "start": "def epsilon",
+      "stop": "\n"
+    },
+    {
+      "path": "CodedSorting/Sorting/Execution/Framework/PhysicalHalted.lean",
+      "start": "def inputWord",
+      "stop": "\ntheorem sizes"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "def run (p : Program",
+      "stop": "\ntheorem run_add"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def cost : Command",
+      "stop": "\ndef execute"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "theorem complete (c",
+      "stop": "\n\nend\n"
+    },
+    {
+      "path": "CodedSorting/Shared/Words/WordConvention.lean",
+      "start": "abbrev Words (count w",
+      "stop": "\n/-- Integer form"
+    },
+    {
+      "path": "CodedSorting/Shared/Words/WordConvention.lean",
+      "start": "def decodeWords",
+      "stop": "\n@[simp] theorem decode_encodeCounter"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/Normalization.lean",
+      "start": "structure PhysicalState",
+      "stop": "\n/-- An ordinary I/O"
+    },
+    {
+      "path": "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean",
+      "start": "abbrev SourcePolicy",
+      "stop": "\ntheorem Configuration.word_width"
+    },
+    {
+      "path": "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean",
+      "start": "def program (q : Configuration)",
+      "stop": "\nabbrev MachineState"
+    },
+    {
+      "path": "CodedSorting/Interchange/Framework/Memory/PhysicalNormalizationLayout.lean",
+      "start": "structure Program (R B b d w",
+      "stop": "\ndef phaseCode"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "abbrev Address (R",
+      "stop": "\ndef code"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/ControlledNormalization.lean",
+      "start": "structure Instruction",
+      "stop": "\ndef logicalStep"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/Normalization.lean",
+      "start": "inductive Command (L",
+      "stop": "\ndef transferCost"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/Normalization.lean",
+      "start": "structure Window",
+      "stop": "\n@[simp] theorem prefix_pack"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/FixedPolicyNormalization.lean",
+      "start": "structure Program (L b D w",
+      "stop": "\n/-- Four phase"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/FixedPolicyNormalization.lean",
+      "start": "def code (hcap : 4",
+      "stop": "\n@[simp] theorem code_val"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/FixedPolicyNormalization.lean",
+      "start": "def ready (hcap",
+      "stop": "\n/-- This fixed"
+    },
+    {
+      "path": "CodedSorting/Shared/Programs/FixedPolicyNormalization.lean",
+      "start": "def step (hb : b ≤ B) (hcap",
+      "stop": "\n/-- A proof-only description"
+    },
+    {
+      "path": "CodedSorting/Interchange/Framework/Memory/PhysicalNormalizationLayout.lean",
+      "start": "def phaseCode",
+      "stop": "\n/-- One transition"
+    },
+    {
+      "path": "CodedSorting/Interchange/Framework/Memory/PhysicalNormalizationLayout.lean",
+      "start": "def step (p : Program",
+      "stop": "\ndef initial"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/PhysicalNormalizationCompact.lean",
+      "start": "def step (p : Program",
+      "stop": "\ndef patch"
+    },
+    {
+      "path": "CodedSorting/Interchange/Framework/Memory/LayoutMachine.lean",
+      "start": "def extract (B b start",
+      "stop": "\ndef logicalRead"
+    },
+    {
+      "path": "CodedSorting/Interchange/Framework/Memory/LayoutMachine.lean",
+      "start": "def patchBuffer",
+      "stop": "\n/-- A read-modify-write"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "def code (p : Program",
+      "stop": "\n@[simp] theorem expand_put"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "def step (p : Program",
+      "stop": "\ndef run"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "def outputWord (p",
+      "stop": "\ntheorem core_logical_refinement"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/PhysicalNormalizationCompact.lean",
+      "start": "def targetWord",
+      "stop": "\n/-- A physical read-modify-write"
+    },
+    {
+      "path": "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean",
+      "start": "abbrev MachineState",
+      "stop": "\ntheorem resident_memory"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/LargeMemory.lean",
+      "start": "def configuration",
+      "stop": "\ndef parameters"
+    },
+    {
+      "path": "CodedSorting/Sorting/Execution/AllInputPhysical.lean",
+      "start": "def algorithm (q : Configuration) (p : Parameters q)",
+      "stop": "\n/-- Raw compact integer input"
+    },
+    {
+      "path": "CodedSorting/Sorting/Execution/Framework/PhysicalHalted.lean",
+      "start": "def start (q",
+      "stop": "\ndef inputWord"
+    },
+    {
+      "path": "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean",
+      "start": "def initialState",
+      "stop": "\ntheorem initialize_sizes"
+    },
+    {
+      "path": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "start": "def initial (p",
+      "stop": "\n@[simp] theorem putExpand_self"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def cell (hB",
+      "stop": "\ntheorem execute_append"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "abbrev Buffer (B",
+      "stop": "\ndef cost"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def execute : List",
+      "stop": "\ndef observe"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def compile (hB",
+      "stop": "\ntheorem update_observe"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def check (base",
+      "stop": "\ntheorem check_observe"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "inductive LoopExecutes",
+      "stop": "\ntheorem lift_loop"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "inductive Executes (hB",
+      "stop": "\ntheorem lift_stages"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallMemorySorting.lean",
+      "start": "inductive Stage",
+      "stop": "\nnoncomputable def code"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/Uniform/BlockCompress.lean",
+      "start": "structure LoopProgram",
+      "stop": "\n/-- A loop invariant"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "start": "def BoundedCommand",
+      "stop": "\ntheorem compile_bound"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/Uniform/BlockCompress.lean",
+      "start": "def BoundedProgram",
+      "stop": "\ntheorem loop_frame"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/PublicUnrolledBlockSort.lean",
+      "start": "def BoundedStage",
+      "stop": "\n/-- This includes"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/Radix/Sort.lean",
+      "start": "def BoundedCommand",
+      "stop": "\ntheorem compile_bound"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/Uniform/Loop.lean",
+      "start": "structure Program (W",
+      "stop": "\ndef check"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/Radix/Initialize.lean",
+      "start": "inductive Stage (W",
+      "stop": "\n/-- A finite sequence"
+    },
+    {
+      "path": "CodedSorting/Sorting/SmallMemory/PhysicalAddresses.lean",
+      "start": "inductive Command (W : Type*)",
+      "stop": "\ndef step"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "start": "def smallSpaceBound",
+      "stop": "\n/-- Choose the program"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/LargeMemory.lean",
+      "start": "def inventory",
+      "stop": "\ndef configuration"
+    },
+    {
+      "path": "CodedSorting/Sorting/Theorem31/LargeMemory.lean",
+      "start": "def coefficient",
+      "stop": "\ndef factor"
+    },
+    {
+      "path": "CodedSorting/Interchange/Recursion/Resources.lean",
+      "start": "theorem exists_rate",
+      "stop": "\n/-- A single fixed constant"
+    }
+  ]
+}

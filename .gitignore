@@ -1,0 +1,6 @@
+lean/.lake/
+lean/reports/
+lean/logs/
+lean-runtime/
+__pycache__/
+*.pyc

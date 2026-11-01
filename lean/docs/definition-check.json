@@ -1,0 +1,18 @@
+{
+  "root": "CodedSorting.Sorting.Theorem31.theorem_3_1",
+  "declarations": 2687,
+  "kinds": {
+    "root_theorem": 1,
+    "definition": 1693,
+    "inductive": 76,
+    "constructor": 108,
+    "recursor": 10,
+    "checked_lemma": 799
+  },
+  "source_modules": 186,
+  "project_edges": 16166,
+  "foundation_constants": 576,
+  "unresolved_project_dependencies": 0,
+  "project_axioms": 0,
+  "project_opaque_declarations": 0
+}

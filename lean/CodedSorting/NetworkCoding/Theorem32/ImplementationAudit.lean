@@ -1,0 +1,20 @@
+import CodedSorting.NetworkCoding.Theorem32.Proof
+
+/-! This is a final gate, not evidence until the complete import builds. -/
+#print axioms CodedSorting.Construction.NetworkCodingResult.physicalEdgeEquiv
+#print axioms CodedSorting.Construction.NetworkCodingResult.forward_verified
+#print axioms CodedSorting.Construction.NetworkCodingResult.middle_verified
+#print axioms CodedSorting.Construction.NetworkCodingResult.linearCode_correct
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock_linear
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock_direction
+#print axioms CodedSorting.Construction.NetworkCodingResult.physical_rank_budget
+#print axioms CodedSorting.Construction.NetworkCodingResult.coding_capacity_eq_one
+#print axioms CodedSorting.Construction.NetworkCodingResult.binary_linear_rates_approach_one
+#print axioms CodedSorting.Construction.NetworkCodingResult.routing_capacity_le
+#print axioms CodedSorting.Construction.NetworkCodingResult.strictPackets_pos
+#print axioms CodedSorting.Construction.NetworkCodingResult.strictBlock_linear
+#print axioms CodedSorting.Construction.NetworkCodingResult.strictBlock_rate_gt_gap
+#print axioms CodedSorting.Construction.NetworkCodingResult.strictBlock_beats_routing
+#print axioms CodedSorting.Construction.NetworkCodingResult.finite_binary_linear_strict_block
+#print axioms CodedSorting.Construction.NetworkCodingResult.network_coding_result

@@ -1,0 +1,8 @@
+import CodedSorting.Circuit.Labels.FiniteInterpretation
+
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.projection_equations_of_valid
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_rank
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_finrank
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_membership
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_nested
+#print axioms CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_inclusion

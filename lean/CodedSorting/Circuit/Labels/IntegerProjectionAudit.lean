@@ -1,0 +1,10 @@
+import CodedSorting.Circuit.Labels.FiniteInterpretation
+
+#print axioms CodedSorting.Construction.IntegerProjection.idempotent
+#print axioms CodedSorting.Construction.IntegerProjection.nested
+#print axioms CodedSorting.Construction.IntegerProjection.integer_vector_mem_range
+#print axioms CodedSorting.Construction.IntegerProjection.trace_eq_rank
+#print axioms CodedSorting.Construction.IntegerProjection.rank_of_integer_trace
+#print axioms CodedSorting.Construction.IntegerProjection.certificate_frame_finrank
+#print axioms CodedSorting.Construction.IntegerProjection.certificate_frame_membership
+#print axioms CodedSorting.Construction.IntegerProjection.range_le_of_integer_product

@@ -1,0 +1,371 @@
+{
+  "schema": 1,
+  "snapshot": {
+    "declarations": {
+      "CodedSorting.CommonIntegerPhysical.InputFile": {
+        "readable_type": "(q : CommonSortingNormalization.Configuration) →\n  CommonNormalizationController.Disk (q.N ^ q.exponent) q.B q.w → List (WordControl.Word q.w) → Prop",
+        "type_sha256": "d8d20b30e62ed1c513120cf5afea4633d269b9cd7b493aa8dfcd300fab1ea180",
+        "value_sha256": "5667e2c326b5b597f5fb646aa1f1c4f5c3b2c3051cced9b4d89618d601991366"
+      },
+      "CodedSorting.CommonIntegerPhysical.inputWord": {
+        "readable_type": "(q : CommonSortingNormalization.Configuration) →\n  CommonNormalizationController.Disk (q.N ^ q.exponent) q.B q.w → ℕ → WordControl.Word q.w",
+        "type_sha256": "4762ab39e7c5a03021b06d64e8617e6a9114fc90dbbabeb55050faa880aabe86",
+        "value_sha256": "b23b213399775ef6e23dd576052298020e4a207ad008ea67878a5a86cbd4e382"
+      },
+      "CodedSorting.CommonNormalizationController.Address": {
+        "readable_type": "ℕ → Type",
+        "type_sha256": "e27ef05b03ab2ced028ca1bc82e91f7d8e9d16dc1eb3c1f660646ad0912b68fb",
+        "value_sha256": "f9043bac29f5b221144262236cb2035df60775e5e5bb46bd5a8739157ab7ad0f"
+      },
+      "CodedSorting.CommonNormalizationController.Program": {
+        "readable_type": "ℕ → ℕ → ℕ → ℕ → ℕ → ℕ → Type",
+        "type_sha256": "c323ab614d011e385c212a83ac8130bbc581d0c4bc697106370bae60861c2b48"
+      },
+      "CodedSorting.CommonNormalizationController.Program.mk": {
+        "readable_type": "{L R B b d w : ℕ} →\n  0 < R →\n    0 < B →\n      b ≤ B →\n        R < (2 ^ w) ^ d →\n          8 ≤ 2 ^ w →\n            WordControl.Word w →\n              ControlledNormalization.Policy L b R (WordControl.Word w) →\n                CommonNormalizationController.Program L R B b d w",
+        "type_sha256": "39d7c83f1066907ef563ed71632b8da1988aaa95b51d9b94a108165dc0ab9c60"
+      },
+      "CodedSorting.CommonNormalizationController.State": {
+        "readable_type": "ℕ → ℕ → ℕ → ℕ → ℕ → ℕ → Type",
+        "type_sha256": "c323ab614d011e385c212a83ac8130bbc581d0c4bc697106370bae60861c2b48"
+      },
+      "CodedSorting.CommonNormalizationController.State.mk": {
+        "readable_type": "{L R B b d w : ℕ} →\n  WordControl.Words L w →\n    WordControl.Words B w →\n      WordControl.Words b w →\n        WordControl.Words d w →\n          WordControl.Words d w →\n            WordControl.Words d w →\n              WordControl.Word w →\n                WordControl.Word w →\n                  CommonNormalizationController.Disk R B w → CommonNormalizationController.State L R B b d w",
+        "type_sha256": "dfcea1c8661c2d16439895e8fe801fd066f5aa52d78cfe0f54dbe6bd2f512ca9"
+      },
+      "CodedSorting.CommonNormalizationController.outputWord": {
+        "readable_type": "{L R B b d w : ℕ} →\n  CommonNormalizationController.Program L R B b d w →\n    CommonNormalizationController.State L R B b d w → BlockReflection.Disk (WordControl.Word w)",
+        "type_sha256": "25182ad63d363dae2f900bb1adeb5ab31a1f90be0ff9821b49843250b74fcd6d",
+        "value_sha256": "ab0e708b2a2a255c5b39bf13a26026daac4a34873eb2ddde62f9362164293ef4"
+      },
+      "CodedSorting.CommonNormalizationController.run": {
+        "readable_type": "{L R B b d w : ℕ} →\n  CommonNormalizationController.Program L R B b d w →\n    ℕ → CommonNormalizationController.State L R B b d w → CommonNormalizationController.State L R B b d w × ℕ",
+        "type_sha256": "0c8c591a77bcc3280c3fb7ffdb66b93e939c56ceda816275c5f8f2a047bbcf80",
+        "value_sha256": "6c1bec3a507335704af76924ae696ef9bf34f3c5bd5eb519d3f3d075a1529399"
+      },
+      "CodedSorting.CommonNormalizationController.step": {
+        "readable_type": "{L R B b d w : ℕ} →\n  CommonNormalizationController.Program L R B b d w →\n    CommonNormalizationController.State L R B b d w → CommonNormalizationController.State L R B b d w × ℕ",
+        "type_sha256": "ec2e0a510f82b6a937b9193f457bd6c65fec28a0e67edcb5bbb6fd49dbbcd127",
+        "value_sha256": "bc1ad3a76b0ad50e65ee6fc83c8e3f60e40a8240bf4bba5e394e49eb022e764c"
+      },
+      "CodedSorting.CommonSortingNormalization.ResidentIndex": {
+        "readable_type": "CommonSortingNormalization.Configuration → Type",
+        "type_sha256": "08d18bc648a77d9aa88eeb0457dba0b0ae12334428812382c4110ef1bb0cbe29",
+        "value_sha256": "6c4fb4e6145f95f764e29134a277131ec267b5191850de66f7f4d668ee1bf9e1"
+      },
+      "CodedSorting.Construction.BinaryLinearPipeline.BinaryLinearBlock": {
+        "readable_type": "{Node Edge Session : Type} →\n  (net : NetworkProtocol.RankedNetwork Node Edge) →\n    (source sink : Session → Node) →\n      {k T : ℕ} →\n        (block : NetworkRates.BlockCode net source sink k T) →\n          [inst : AddCommMonoid block.State] → [inst : _root_.Module Circuit.Bit block.State] → Prop",
+        "type_sha256": "3882f2f61084cc6f820fc59d62f2b0d5ee23cb78a2ee18b0b46b20f0378817d1"
+      },
+      "CodedSorting.Construction.BinaryLinearPipeline.BinaryLinearBlock.mk": {
+        "readable_type": "∀ {Node Edge Session : Type} {net : NetworkProtocol.RankedNetwork Node Edge} {source sink : Session → Node} {k T : ℕ}\n  {block : NetworkRates.BlockCode net source sink k T} [inst : AddCommMonoid block.State]\n  [inst_1 : _root_.Module Circuit.Bit block.State],\n  (∀ (t : ℕ) (v : Node) (e : Edge),\n      ∃ f, ∀ (s : block.State), BinaryLinearPipeline.bitOfBool (block.protocol.emit t v s e) = f s) →\n    (∀ (t : ℕ) (v : Node),\n        ∃ f,\n          ∀ (s : block.State) (received : Edge → Circuit.Bit),\n            (block.protocol.update t v s fun e => BinaryLinearPipeline.boolOfBit (received e)) = f (s, received)) →\n      (∀ (v : Node),\n          ∃ f,\n            ∀ (input : { i // source i = v } → Fin k → Circuit.Bit),\n              (block.initial v fun i b => BinaryLinearPipeline.boolOfBit (input i b)) = f input) →\n        (∀ (i : Session),\n            ∃ f, ∀ (s : block.State) (b : Fin k), BinaryLinearPipeline.bitOfBool (block.decode i s b) = f s b) →\n          BinaryLinearPipeline.BinaryLinearBlock net source sink block",
+        "type_sha256": "8e04ba3a5d7a08e65ae355a97755f4ed6360d36babd5415860cbc09b922751af"
+      },
+      "CodedSorting.Construction.FiniteProjectionInterpretation.checked_frame_inclusion": {
+        "readable_type": "∀ (a b : ℕ),\n  FiniteCertificate.frameProjectionValid a = true →\n    FiniteCertificate.frameProjectionValid b = true →\n      FiniteCertificate.frameNested a b = true →\n        IntegerProjection.certificateFrame FiniteCertificate.projections[a]! ≤\n          IntegerProjection.certificateFrame FiniteCertificate.projections[b]!",
+        "type_sha256": "82a991183c96a0bf9bc1824c63e953de5f81372a216c38f6d3eeeb03cd40be3c"
+      },
+      "CodedSorting.Construction.NetworkCodingResult.finite_binary_linear_strict_block": {
+        "readable_type": "∃ k,\n  0 < k ∧\n    BinaryLinearPipeline.BinaryLinearBlock network source sink (finiteLinearBlock k) ∧\n      Nonempty (NetworkRates.BlockCode network source sink k (k + depth)) ∧\n        NetworkRates.routingCapacity network source sink < ↑k / (↑k + ↑depth)",
+        "type_sha256": "cf446c21b6a916ee9358117fa5ffa0b2a5c97d11f2d64dd0e79a3cd5dc3d0786"
+      },
+      "CodedSorting.Construction.NetworkCodingResult.network": {
+        "readable_type": "NetworkProtocol.RankedNetwork\n  (NetworkSubdivision.Vertex\n    (ProgramNetwork.Vertex TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length)\n    (ProgramNetwork.Wire TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length))\n  (NetworkSubdivision.HalfEdge\n    (ProgramNetwork.Wire TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length))",
+        "type_sha256": "a3db479a9b38f433017f3e55af774741dc06cf7d65f9610e2d83ae5eaf6e2499",
+        "value_sha256": "df0d1f8d6789b504aba02a906ffcde426561e714f40c797d3c261f7a72accb87"
+      },
+      "CodedSorting.Construction.NetworkCodingResult.physicalEdgeEquiv": {
+        "readable_type": "NetworkSubdivision.HalfEdge\n    (ProgramNetwork.Wire TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length) ≃\n  ↑graph.edgeSet",
+        "type_sha256": "ec8fa60d6b095454a38533c31876235c754986143aa0fb24c8767321b9a39353",
+        "value_sha256": "dfc43a3e87444ad86a67b33df2bfaf1dc027963addaaa1dba17d41452e4d362e"
+      },
+      "CodedSorting.Construction.NetworkCodingResult.sink": {
+        "readable_type": "TensorNetwork.Session →\n  NetworkSubdivision.Vertex\n    (ProgramNetwork.Vertex TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length)\n    (ProgramNetwork.Wire TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length)",
+        "type_sha256": "1391cfc565f3f912dc3a932b59391789f62fb6032ed70ecaec1d2a0ad34d9e82",
+        "value_sha256": "b5d86fd122eb1434740d572690d8862f230986745c88d3bcac4844b2b9de2faa"
+      },
+      "CodedSorting.Construction.NetworkCodingResult.source": {
+        "readable_type": "TensorNetwork.Session →\n  NetworkSubdivision.Vertex\n    (ProgramNetwork.Vertex TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length)\n    (ProgramNetwork.Wire TensorLiftProgram.GlobalReg\n      (TensorThreeRound.threeRoundProgram ConcreteLocalProgram.forward ConcreteLocalProgram.middle\n          ConcreteLocalProgram.forward TensorFrameGeometry.partner).length)",
+        "type_sha256": "2c47be254b87ec7fbe9cf9da97ef10355ca473798eddd487815d5a04abaf0cd9",
+        "value_sha256": "8c59b3da1320d1abb7c4583d3a726b7e0dfdf95a03af29a594e6b91662389c8c"
+      },
+      "CodedSorting.Construction.SSAFunctionCertificate.trace_sound": {
+        "readable_type": "∀ (rows : ℕ → ℕ) (es : List SSAFunctionCertificate.Step) (ids : ℕ → ℕ),\n  SSAFunctionCertificate.ValidTrace rows ids es →\n    List.foldl SSAFunctionCertificate.stepFunction (fun r => rows (ids r)) (List.map SSACertificate.Step.gate es) =\n      fun r => rows (SSAFunctionCertificate.runIds es ids r)",
+        "type_sha256": "328f1037ac0e140e1c4142a68634326886a6ae607526616699c85a040a870b1b"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordNormalSorting.factor": {
+        "readable_type": "ℕ → ℕ → ℕ → ℝ",
+        "type_sha256": "9a178a38beba97f4281d1b001668a4e972a899026002b3decb9ce681c1c6a010",
+        "value_sha256": "1ad383bb7e639b32713577a7311332b7a1ce44abae49ebcab9c10e3bfcdc215c"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.NormalGuarantee": {
+        "readable_type": "(c : ℕ) →\n  (κ : ℝ) →\n    0 ≤ κ →\n      (N M B w : ℕ) →\n        2 ≤ N →\n          0 < B →\n            2 * B ≤ M →\n              M ≤ N →\n                GeneralWordNormalSorting.Mcut c κ ≤ M →\n                  WordConvention.Covers N w c → ↑w * Real.log 2 ≤ κ * Real.log ↑N → Prop",
+        "type_sha256": "1f3890cdad76e3f2eba0f246272ba373889f9a4498622678d943c86fae7c2c80",
+        "value_sha256": "ec30ec407d63ca36db5f742bc3ed362bb5e44d30620d765031c272e56ff8ab41"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.SmallGuarantee": {
+        "readable_type": "ℕ → ℝ → ℕ → ℕ → (B : ℕ) → ℕ → 0 < B → Prop",
+        "type_sha256": "3e4b41044bc3ae7e72823f80b3d543e1a4023282995a939f7a4ad1d27ccc7a1e",
+        "value_sha256": "748dcfc6197bb88cdc6504a88487198263884db7acbb77a726bd7f46e4e4119e"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.coefficient": {
+        "readable_type": "ℕ → ℝ → ℝ",
+        "type_sha256": "ffb74621686b943cbd12a4ae41fff297cb63a8dba7ba19a7ab9b5cb4df2d1b12",
+        "value_sha256": "5b81aecfec2c3d0423ad76bfd7d3d636954901696fe7b1e4dbdc34b949e07e36"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.coefficient_positive": {
+        "readable_type": "∀ (c : ℕ) (κ : ℝ), 0 < coefficient c κ",
+        "type_sha256": "4147abb40117769c5e025818c014034e8d0c0655055c72850a9eda2ebfa67a00"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.factor": {
+        "readable_type": "ℕ → ℕ → ℕ → ℝ",
+        "type_sha256": "9a178a38beba97f4281d1b001668a4e972a899026002b3decb9ce681c1c6a010",
+        "value_sha256": "1e39a7f8559acca83ee7b19450b6c578ec9d610cc52544bbbb5a2896aad08222"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.factor_eq": {
+        "readable_type": "∀ (N M B : ℕ), factor N M B = GeneralWordNormalSorting.factor N M B",
+        "type_sha256": "0984fc3639f37d8c6a04644a50e83c36f4b74715fb8f23557461746a9b440df2"
+      },
+      "CodedSorting.Construction.Sorting.GeneralWordSorting.smallSpaceBound": {
+        "readable_type": "ℕ → ℝ → ℕ → ℕ",
+        "type_sha256": "7f64246f18772ce4d9299e9cc701528df8a1c3b4ad419db14d5fcc1d79fd6f42",
+        "value_sha256": "91d0af9cfe732b26c3c45ad90f3984f57fd37d01a0e01cae80f15fdebd579b5c"
+      },
+      "CodedSorting.Construction.TensorFrameNetwork.actualLabel_endpoint_rank": {
+        "readable_type": "∀ (r : ThreeCopySchedule.IndependentStream),\n  Matrix.rank\n      (TensorFrameNetwork.actualLabel (ProgramNetwork.Vertex.sink (Sum.inl (TensorThreeRound.originalSwap r))) -\n        TensorFrameNetwork.actualLabel (ProgramNetwork.Vertex.source (Sum.inl r))) =\n    512",
+        "type_sha256": "3a1cbc65e34cd4edc816211439577a74410745d58b48a7e9243c8ceb0d9f547c"
+      },
+      "CodedSorting.Construction.TensorFrameNetwork.actualRank_eq_budget": {
+        "readable_type": "StageLabels.physicalRank TensorFrameNetwork.program TensorFrameNetwork.actualLabel = rankBudget",
+        "type_sha256": "8168b425f0f31ac3343bae39addbc81435bb963c81cc2d344d0cbd45664d590b"
+      },
+      "CodedSorting.Construction.TensorNetwork.OriginalActive": {
+        "readable_type": "TensorLiftProgram.GlobalReg → Prop",
+        "type_sha256": "b712d184c6206953d611ce3ac80ce5540804d42650d1a47c43c2bbdd238cfaae",
+        "value_sha256": "4f0e688526994e53dd5523bb69554bf89788b1053c6fa2e5b8dfa8340d38e3be"
+      },
+      "CodedSorting.Construction.TensorNetwork.Session": {
+        "readable_type": "Type",
+        "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+        "value_sha256": "c745447892e3e8c352280f893239abab52a67a8493f36e3a775badb1222071c2"
+      },
+      "CodedSorting.Construction.TensorNetwork.session_count": {
+        "readable_type": "Fintype.card TensorNetwork.Session = streamCount",
+        "type_sha256": "22a673fa910da301ce3e33b36b4dc0b1d1b9da70b311d9070931c15d062ca15a"
+      },
+      "CodedSorting.GraphRouting.Walk": {
+        "readable_type": "{Node : Type u} → {Edge : Type v} → NetworkProtocol.RankedNetwork Node Edge → Node → Node → Type (max u v)",
+        "type_sha256": "5c1c6ea92ac0919a25fa7e9ab3a906614985fbe8a8fabf1289b25fbe7ad4b537"
+      },
+      "CodedSorting.GraphRouting.Walk.edges": {
+        "readable_type": "{Node : Type u} →\n  {Edge : Type v} →\n    {net : NetworkProtocol.RankedNetwork Node Edge} → {s t : Node} → GraphRouting.Walk net s t → List Edge",
+        "type_sha256": "36da4902cee21a1b6e8d9aa79ecdff0cb5039bbd303bf47bf1e618b0a7f12ac2",
+        "value_sha256": "d8b5ddc6f720f58dec5f185f69dd8c74e31f95314306534b1958bc112cd4f463"
+      },
+      "CodedSorting.GraphRouting.Walk.forward": {
+        "readable_type": "{Node : Type u} →\n  {Edge : Type v} →\n    {net : NetworkProtocol.RankedNetwork Node Edge} →\n      (e : Edge) → {t : Node} → GraphRouting.Walk net (net.head e) t → GraphRouting.Walk net (net.tail e) t",
+        "type_sha256": "8da2930dedbcd07418fdf49821c55b8e3c8b83d868ae7b5a2664347d54517585"
+      },
+      "CodedSorting.GraphRouting.Walk.nil": {
+        "readable_type": "{Node : Type u} →\n  {Edge : Type v} → {net : NetworkProtocol.RankedNetwork Node Edge} → (v : Node) → GraphRouting.Walk net v v",
+        "type_sha256": "bd2da4dddd03a1aad89a6b63e1dd8feb95f7cd0d28d7bf256daa1772caec9b22"
+      },
+      "CodedSorting.GraphRouting.Walk.reverse": {
+        "readable_type": "{Node : Type u} →\n  {Edge : Type v} →\n    {net : NetworkProtocol.RankedNetwork Node Edge} →\n      (e : Edge) → {t : Node} → GraphRouting.Walk net (net.tail e) t → GraphRouting.Walk net (net.head e) t",
+        "type_sha256": "b368e4d4dfd975a0210c2c5461736e685a3e98502b10741fb24f8a97804c709f"
+      },
+      "CodedSorting.NetworkCoding.Theorem32.theorem_3_2": {
+        "readable_type": "NetworkProtocol.Correct network linearCode ∧\n  NetworkRates.capacity network source sink = 1 ∧\n    (∀ rate < 1,\n        ∃ k,\n          0 < k ∧\n            BinaryLinearPipeline.BinaryLinearBlock network source sink (finiteLinearBlock k) ∧\n              rate < ↑k / (↑k + ↑depth)) ∧\n      NetworkRates.routingCapacity network source sink ≤ 1 - 33 / 338432 ∧\n        NetworkRates.routingCapacity network source sink < NetworkRates.capacity network source sink ∧\n          ∃ k,\n            0 < k ∧\n              BinaryLinearPipeline.BinaryLinearBlock network source sink (finiteLinearBlock k) ∧\n                Nonempty (NetworkRates.BlockCode network source sink k (k + depth)) ∧\n                  NetworkRates.routingCapacity network source sink < ↑k / (↑k + ↑depth)",
+        "type_sha256": "c82dfe8689b4211cd10114770fcc477db805130e1bf77863f4fc25a395aba186"
+      },
+      "CodedSorting.NetworkCut.Protocol": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} → NetworkProtocol.RankedNetwork Node Edge → Type u_4 → Type (max (max u_1 u_2) u_4)",
+        "type_sha256": "c9b75b14d063e946e39a575aa48568646c8e8511338da7a71b91f6f2573bd542"
+      },
+      "CodedSorting.NetworkCut.Protocol.mk": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} →\n    {net : NetworkProtocol.RankedNetwork Node Edge} →\n      {State : Type u_4} →\n        (ℕ → Edge → Bool) →\n          (ℕ → Node → State → Edge → Bool) → (ℕ → Node → State → (Edge → Bool) → State) → NetworkCut.Protocol net State",
+        "type_sha256": "96a8a2c1d4625c572532268866c850472acb08b000b49a254c432de80426603c"
+      },
+      "CodedSorting.NetworkCut.message": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} →\n    {State : Type u_3} →\n      (net : NetworkProtocol.RankedNetwork Node Edge) → NetworkCut.Protocol net State → ℕ → (Node → State) → Edge → Bool",
+        "type_sha256": "ec75ed6fca287a15b46e4fde5cec9f7e83e5dddaf142b4a0db149d39ef87b4c0",
+        "value_sha256": "de92c8d8fa5262fd81ce66ae312927f9e52b56f49de75baf09b6cf3abad958ee"
+      },
+      "CodedSorting.NetworkCut.run": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} →\n    {State : Type u_3} →\n      (net : NetworkProtocol.RankedNetwork Node Edge) →\n        NetworkCut.Protocol net State → ℕ → ℕ → (Node → State) → Node → State",
+        "type_sha256": "660132172fa71450b0994b71751ea089687daa080840789338c7b13652ea57b0",
+        "value_sha256": "4cff3c28b30c54a38540854dc0d477dbf46d3914775a51af90dee13741f250a7"
+      },
+      "CodedSorting.NetworkCut.step": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} →\n    {State : Type u_3} →\n      (net : NetworkProtocol.RankedNetwork Node Edge) →\n        NetworkCut.Protocol net State → ℕ → (Node → State) → Node → State",
+        "type_sha256": "e50c681ff454b8304d57214dc6dd48a51a5db53360afff0eec4c3055eea0f1c6",
+        "value_sha256": "86708276149eee6c0efd242ba9913f9fc4003541b2fac45c7b1c5dfdf70532a4"
+      },
+      "CodedSorting.NetworkProtocol.Correct": {
+        "readable_type": "{Node : Type u_1} →\n  {Edge : Type u_2} →\n    {Session : Type u_3} →\n      (net : NetworkProtocol.RankedNetwork Node Edge) → NetworkProtocol.LinearCode net Session → Prop",
+        "type_sha256": "c892e0c7db17da7850127e0e33156ff10996fdbf91b2705c4588719ebede56ba",
+        "value_sha256": "4e37b66646b63026bfafcb0ec67846d1904992607794094671860ec196e7788e"
+      },
+      "CodedSorting.NetworkRates.Achievable": {
+        "readable_type": "{Node Edge Session : Type} → NetworkProtocol.RankedNetwork Node Edge → (Session → Node) → (Session → Node) → ℝ → Prop",
+        "type_sha256": "668a6646b11db5deae446167f3fc73682f81648cad69b6b727d7149bc8e71382",
+        "value_sha256": "0d8050e137f25b8542a6358bcbe40c21a4d46536d1d36898caffbf1bf93070ab"
+      },
+      "CodedSorting.NetworkRates.BlockCode": {
+        "readable_type": "{Node Edge Session : Type} →\n  NetworkProtocol.RankedNetwork Node Edge → (Session → Node) → (Session → Node) → ℕ → ℕ → Type 1",
+        "type_sha256": "b99177cf568fc5c63cd62b8b7eb9c9ced5fb86bc8bcb47b243f41dcfcd4fef92"
+      },
+      "CodedSorting.NetworkRates.BlockCode.mk": {
+        "readable_type": "{Node Edge Session : Type} →\n  {net : NetworkProtocol.RankedNetwork Node Edge} →\n    {source sink : Session → Node} →\n      {k T : ℕ} →\n        (State : Type) →\n          (protocol : NetworkCut.Protocol net State) →\n            (initial : (v : Node) → ({ i // source i = v } → Fin k → Bool) → State) →\n              (decode : Session → State → Fin k → Bool) →\n                (∀ (input : Session → Fin k → Bool) (i : Session),\n                    decode i (NetworkCut.run net protocol T 0 (fun v => initial v fun j => input ↑j) (sink i)) =\n                      input i) →\n                  NetworkRates.BlockCode net source sink k T",
+        "type_sha256": "73951f43c88e9cca014c27daaed0c2daf378ef34315e32d933a0832af1d8237a"
+      },
+      "CodedSorting.NetworkRates.Routable": {
+        "readable_type": "{Node Edge Session : Type} →\n  NetworkProtocol.RankedNetwork Node Edge →\n    (Session → Node) → (Session → Node) → [inst : DecidableEq Edge] → [inst : DecidableEq Session] → ℝ → Prop",
+        "type_sha256": "70cb9aefbb4fd50b9cf3444b7691455d6a111619e5f82b8e337bad9959a7496a",
+        "value_sha256": "36d3c10456d6a706c9c31448fba822f1bc13c6a794f578709c222d03758a387c"
+      },
+      "CodedSorting.NetworkRates.capacity": {
+        "readable_type": "{Node Edge Session : Type} → NetworkProtocol.RankedNetwork Node Edge → (Session → Node) → (Session → Node) → ℝ",
+        "type_sha256": "cd543b9d2ecb6926b2b117b7b0e7cc0136bf83f5145a1447ec5d3a37c2e36f47",
+        "value_sha256": "c94d7e64f084edec4d1de10ce26ab16f2c0f93c2f20b45e00f00943178627f84"
+      },
+      "CodedSorting.NetworkRates.routingCapacity": {
+        "readable_type": "{Node Edge Session : Type} →\n  NetworkProtocol.RankedNetwork Node Edge →\n    (Session → Node) → (Session → Node) → [inst : DecidableEq Edge] → [inst : DecidableEq Session] → ℝ",
+        "type_sha256": "bfa63efce0ed48860beb057f41e7e52dd8b9f8a24eb79faebb680b30aaa7a610",
+        "value_sha256": "721cb1a6a9cfeedd4147d2679bad235cdc72355e91e2f9d6aacfe67618a435b3"
+      },
+      "CodedSorting.Sorting.Theorem31.theorem_3_1": {
+        "readable_type": "∀ (c : ℕ) (κ : ℝ) (hκ : 0 ≤ κ) (N M B w : ℕ) (hN : 2 ≤ N) (hB : 0 < B) (hBM : 2 * B ≤ M) (hMN : M ≤ N)\n  (hw : WordConvention.Covers N w c) (hword : ↑w * Real.log 2 ≤ κ * Real.log ↑N),\n  (∃ (hM : GeneralWordNormalSorting.Mcut c κ ≤ M), NormalGuarantee c κ hκ N M B w hN hB hBM hMN hM hw hword) ∨\n    M < GeneralWordNormalSorting.Mcut c κ ∧ SmallGuarantee c κ N M B w hB",
+        "type_sha256": "fb200fd51e4cb92b3e9ddf53ee140ae81de36d0c8b163ae39230a2251e5de4a6"
+      },
+      "CodedSorting.TwoWordBlockFormat.File": {
+        "readable_type": "{B : ℕ} → {W : Type u_1} → 0 < B → (ℕ → TwoWordBlockLift.Buffer B W) → List W → Prop",
+        "type_sha256": "847ad44ada668f8c6925b3525dab63a99344624a5d52c8e02cab33539e2df65b",
+        "value_sha256": "241442e2cc9f6ace85520c0203e528e6e4d5fb654f361517e8b726fc62de09ac"
+      },
+      "CodedSorting.TwoWordBlockFormat.cell": {
+        "readable_type": "{B : ℕ} → 0 < B → ℕ → Fin B",
+        "type_sha256": "2ee2a231afeefe1ece64d9396364d2fd120b1685980cee95396562d01ce9f834",
+        "value_sha256": "ebf399ec253aa42bf531295b521bbf2ecc2829e082be9bdfcfd8b5942cab3ef4"
+      },
+      "CodedSorting.TwoWordBlockFormat.wordAt": {
+        "readable_type": "{B : ℕ} → {W : Type u_1} → 0 < B → (ℕ → TwoWordBlockLift.Buffer B W) → ℕ → W",
+        "type_sha256": "8b6750524bcb8f8f94830531820a882a893043c19c7af03801db0c98c5ee089f",
+        "value_sha256": "f665366feaf9ee6003937e724d9d979783f8f27c5e8ab65d122e4aacdb92b2a1"
+      },
+      "CodedSorting.TwoWordBlockLift.Command": {
+        "readable_type": "ℕ → Type u_2 → Type u_2",
+        "type_sha256": "f8c7dd27f82ca75ecc9d0d32e03ec603608d56d1e66f48364ca9ef2a8fee1ff5"
+      },
+      "CodedSorting.TwoWordBlockLift.Command.cpu": {
+        "readable_type": "{B : ℕ} →\n  {W : Type u_2} →\n    (TwoWordBlockLift.Buffer B W × TwoWordBlockLift.Buffer B W →\n        TwoWordBlockLift.Buffer B W × TwoWordBlockLift.Buffer B W) →\n      TwoWordBlockLift.Command B W",
+        "type_sha256": "df7e6b2ce19028ea3b127b6ac78342cabb49e0ee3a78f1d7a641d7bacb6c7e74"
+      },
+      "CodedSorting.TwoWordBlockLift.Command.readLeft": {
+        "readable_type": "{B : ℕ} → {W : Type u_2} → ℕ → TwoWordBlockLift.Command B W",
+        "type_sha256": "8db243b699ebaaf30c83b24c27ef1891b4dc8f51ce365dcb7fd0b2b8e3ff04b8"
+      },
+      "CodedSorting.TwoWordBlockLift.Command.readRight": {
+        "readable_type": "{B : ℕ} →\n  {W : Type u_2} → (TwoWordBlockLift.Buffer B W × TwoWordBlockLift.Buffer B W → ℕ) → TwoWordBlockLift.Command B W",
+        "type_sha256": "20f49c58851009c4634382093ed883c3c0ef6af3e444ca0fb6efffb508b90e84"
+      },
+      "CodedSorting.TwoWordBlockLift.Command.writeLeft": {
+        "readable_type": "{B : ℕ} → {W : Type u_2} → ℕ → TwoWordBlockLift.Command B W",
+        "type_sha256": "8db243b699ebaaf30c83b24c27ef1891b4dc8f51ce365dcb7fd0b2b8e3ff04b8"
+      },
+      "CodedSorting.TwoWordBlockLift.Command.writeRight": {
+        "readable_type": "{B : ℕ} →\n  {W : Type u_2} → (TwoWordBlockLift.Buffer B W × TwoWordBlockLift.Buffer B W → ℕ) → TwoWordBlockLift.Command B W",
+        "type_sha256": "fec14bb73cfddd065fa3c85d54937297b47a6e7845097bf7d75334daa52f1759"
+      },
+      "CodedSorting.TwoWordBlockLift.State": {
+        "readable_type": "ℕ → Type u_2 → Type u_2",
+        "type_sha256": "f8c7dd27f82ca75ecc9d0d32e03ec603608d56d1e66f48364ca9ef2a8fee1ff5"
+      },
+      "CodedSorting.TwoWordBlockLift.State.mk": {
+        "readable_type": "{B : ℕ} →\n  {W : Type u_2} →\n    TwoWordBlockLift.Buffer B W →\n      TwoWordBlockLift.Buffer B W → (ℕ → TwoWordBlockLift.Buffer B W) → TwoWordBlockLift.State B W",
+        "type_sha256": "b7add0475b261515f011dcd2f914f883c3ae6e21d154533c0ea9eeb23abba600"
+      },
+      "CodedSorting.TwoWordBlockLift.cost": {
+        "readable_type": "{B : ℕ} → {W : Type u_1} → TwoWordBlockLift.Command B W → ℕ",
+        "type_sha256": "0b95632e4f9c0b30595533ff24b392a738aadfb72b9cb24b785fe6c37701c744",
+        "value_sha256": "cfd3fe27d5c477ba98ee252620e9e0251e407ce7c9f5a86ecf1dabcaca80cc3d"
+      },
+      "CodedSorting.TwoWordBlockLift.step": {
+        "readable_type": "{B : ℕ} → {W : Type u_1} → TwoWordBlockLift.Command B W → TwoWordBlockLift.State B W → TwoWordBlockLift.State B W",
+        "type_sha256": "f2876305fe57e112f5d0445c0ac5ae31b5afbfac0912fd8031a74ba9d94afa49",
+        "value_sha256": "1d72b48b45678b44070fd7be3e46c2997a97444a9995ee65e2d3be57db678647"
+      },
+      "CodedSorting.TwoWordSmallMemoryFootprint.BoundedCode": {
+        "readable_type": "{B w : ℕ} → ℕ → List (TwoWordSmallMemorySorting.Stage B w) → Prop",
+        "type_sha256": "d80a3909ffafb5751580930415cc2e7ed609065add036e1275981156e71727eb",
+        "value_sha256": "d789d94418e165fff1674375c957dd369176baf05050dfa69fc782aaf9cf6c6a"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Executes": {
+        "readable_type": "{B w : ℕ} →\n  0 < B →\n    List (TwoWordSmallMemorySorting.Stage B w) →\n      TwoWordBlockLift.State B (TwoWordRadixInsert.Word w) →\n        TwoWordBlockLift.State B (TwoWordRadixInsert.Word w) → ℕ → Prop",
+        "type_sha256": "57f177f347a1febba0a4de1c4428c572d2a80d517bea8b62e81efd8ebb1b08fc"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Executes.core": {
+        "readable_type": "∀ {B w : ℕ} {hB : 0 < B} (base : ℕ) (body : List (TwoWordRadixPreparedBuild.Stage (TwoWordRadixInsert.Word w)))\n  (rest : List (TwoWordSmallMemorySorting.Stage B w)) (s mid t : TwoWordBlockLift.State B (TwoWordRadixInsert.Word w))\n  (ca cb : ℕ),\n  TwoWordBlockLift.Executes hB base body s mid ca →\n    TwoWordSmallMemorySorting.Executes hB rest mid t cb →\n      TwoWordSmallMemorySorting.Executes hB (TwoWordSmallMemorySorting.Stage.core base body :: rest) s t (ca + cb)",
+        "type_sha256": "07b1468f0fae6bcd33cd694abf55f672551d286b57a0352570d111de5d833126"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Executes.done": {
+        "readable_type": "∀ {B w : ℕ} {hB : 0 < B} (s : TwoWordBlockLift.State B (TwoWordRadixInsert.Word w)),\n  TwoWordSmallMemorySorting.Executes hB [] s s 0",
+        "type_sha256": "e1d4da3088a6ca563091e6f728e5777fe96a11ce27cb6f03bd1a299120009c1c"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Executes.loop": {
+        "readable_type": "∀ {B w : ℕ} {hB : 0 < B} (p : TwoWordUniformBlockFormat.LoopProgram B (TwoWordRadixInsert.Word w))\n  (rest : List (TwoWordSmallMemorySorting.Stage B w)) (s mid t : TwoWordBlockLift.State B (TwoWordRadixInsert.Word w))\n  (ca cb : ℕ),\n  TwoWordUniformBlockFormat.Executes hB p s mid ca →\n    TwoWordSmallMemorySorting.Executes hB rest mid t cb →\n      TwoWordSmallMemorySorting.Executes hB (TwoWordSmallMemorySorting.Stage.loop p :: rest) s t (ca + cb)",
+        "type_sha256": "553fbe5efd73916ae893cecb240458ca259a13ee736f4f043af932d13aad0fd2"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Executes.straight": {
+        "readable_type": "∀ {B w : ℕ} {hB : 0 < B} (body : List (TwoWordBlockLift.Command B (TwoWordRadixInsert.Word w)))\n  (rest : List (TwoWordSmallMemorySorting.Stage B w)) (s t : TwoWordBlockLift.State B (TwoWordRadixInsert.Word w))\n  (cost : ℕ),\n  TwoWordSmallMemorySorting.Executes hB rest (TwoWordBlockLift.execute body s) t cost →\n    TwoWordSmallMemorySorting.Executes hB (TwoWordSmallMemorySorting.Stage.straight body :: rest) s t\n      (TwoWordBlockLift.transfers body + cost)",
+        "type_sha256": "2fd388a574bc3a8166e17cae649f90e227b60f22cf8151f4b2ae6a99ecb6ea62"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Stage": {
+        "readable_type": "ℕ → ℕ → Type",
+        "type_sha256": "10deb4ca07f39a04459af1ec4a9b8ce256becb2fff5045bc849181ccfc2005cb"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Stage.core": {
+        "readable_type": "{B w : ℕ} → ℕ → List (TwoWordRadixPreparedBuild.Stage (TwoWordRadixInsert.Word w)) → TwoWordSmallMemorySorting.Stage B w",
+        "type_sha256": "af2d780abeae80b0fa7cd7484483541cc506a9c78a95cfb5db2203946818b024"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Stage.loop": {
+        "readable_type": "{B w : ℕ} → TwoWordUniformBlockFormat.LoopProgram B (TwoWordRadixInsert.Word w) → TwoWordSmallMemorySorting.Stage B w",
+        "type_sha256": "0c406517827d61146ca2b9becb2ffbb7e218fba02acfa0364999416055f3753a"
+      },
+      "CodedSorting.TwoWordSmallMemorySorting.Stage.straight": {
+        "readable_type": "{B w : ℕ} → List (TwoWordBlockLift.Command B (TwoWordRadixInsert.Word w)) → TwoWordSmallMemorySorting.Stage B w",
+        "type_sha256": "baaaae490c2228f31a875e7b7e02d2fc9beceac388a60712e7ca58feca8350cb"
+      },
+      "CodedSorting.WordControl.Word": {
+        "readable_type": "ℕ → Type",
+        "type_sha256": "26413156cf6bf79cb203b1d753227dde811cc62dad17e30906a25ff91c06ebf3",
+        "value_sha256": "f69bf61c7fa9d5a586808eadb06f4ddd0154eb722a0ff3f7ad09e664d6dd28bc"
+      },
+      "CodedSorting.WordConvention.Covers": {
+        "readable_type": "ℕ → ℕ → ℕ → Prop",
+        "type_sha256": "85db3e068fc7051f24ddea279bc28f4fb95c2598cd5394d19041bef43f92c561",
+        "value_sha256": "bd7259ab5c8a0d7d100e495d95469139768c516ef18425bbb7c2d18e5c61e380"
+      }
+    },
+    "model_source_sha256": {
+      "CodedSorting/NetworkCoding/FiniteCodes/BinaryLinearPipeline.lean": "cba44aef5666e72d71279fa0a3107ca89b476902698afc22dfb1beb58f2d0c33",
+      "CodedSorting/NetworkCoding/Model/NetworkRates.lean": "1aea2ee00fec0e067c95e885c46d412f5abe29846e339ef1e85216ca78df81a0",
+      "CodedSorting/NetworkCoding/Theorem32/Coding.lean": "29ecf3d7590434ab435c95c8222bf3068593a87b1da6c0b072d4628d38e7d519",
+      "CodedSorting/NetworkCoding/Theorem32/Proof.lean": "f79e3aeaf2d27a2da607143e0506f6dc08dbffd792062366d27e87ff01a1ef85",
+      "CodedSorting/Shared/Memory/NormalizationController.lean": "9afd7cc48314412c3cf121601dc9151684f7c7be91bfe8392054eb723240de94",
+      "CodedSorting/Shared/Programs/ControlledNormalization.lean": "162a33377ebca8affaa2b8bc585354c93ca8f97a0ff80e105627711632b1858a",
+      "CodedSorting/Shared/Words/WordConvention.lean": "28c6fd10e07a372ed9da4d4959b586dbc5d33d6a639cb3bac3b67d1c93f3bba3",
+      "CodedSorting/Sorting/Execution/Framework/PhysicalHalted.lean": "b3f0931103f691cb9404ebcca3afe6cba72dec2e7596e3e760e83a47563a09d7",
+      "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean": "4d7fe70f1b401b0dd40355da77eb04273b9dc3e823a86736cbec48521360f57d",
+      "CodedSorting/Sorting/SmallMemory/NarrowWords/PublicUnrolledComplete.lean": "3872cd6e8523aa162344893a9e373040db31d6d24480152e4e706d05760d7344",
+      "CodedSorting/Sorting/SmallMemory/PublicUnrolledBlockSort.lean": "e198287f336caf20a9b4a13a4077e8d24c4c575ab3f8ebb797c874265b160a4e",
+      "CodedSorting/Sorting/SmallMemory/SmallMemorySorting.lean": "0474ec31ef70c18a2e0d257f0965e0029ff64724bff79df36b4ab0beadc566d4",
+      "CodedSorting/Sorting/SmallMemory/SmallSort.lean": "1189faa0e4d31f8800e13a728bb94d33e1271a239815a1adaa89e581499928e9",
+      "CodedSorting/Sorting/Theorem31/LargeMemory.lean": "35d3ab61a6ec2ac6b49c451332e2378de0c51594cbac1ff3aeff5cd017734ecf",
+      "CodedSorting/Sorting/Theorem31/Proof.lean": "ba6e2bc13fd85aa0576896c02e47e143831f289b55ff9c073078c48f7b9e2feb",
+      "CodedSorting/Sorting/Theorem31/SmallMemory.lean": "11b4bbeb38a7f7cd3866610027520350feff74980a95bcff83e10b8ffd0eb075"
+    },
+    "schema": 1
+  },
+  "description": "Reference theorem statements, model definitions, and source hashes checked by scripts/verify.py."
+}

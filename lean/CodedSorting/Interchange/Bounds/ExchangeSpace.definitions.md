@@ -1,0 +1,89 @@
+# ExchangeSpace 的定义
+
+[源码](ExchangeSpace.lean) · [主定理导读](../../Sorting/Theorem31/Definitions.zh-CN.md) · [基础概念](../../../docs/FoundationDefinitions.zh-CN.md)
+
+本页根据 Lean 编译后的声明生成。每个项目依赖都有继续阅读的链接；证明项由 Lean 检查。`⋯` 表示打印时省略的证明或较长子表达式，原始定义可从源码位置完整查看。
+
+<a id="def-82ffbda57af73547"></a>
+## `_private.CodedSorting.Interchange.Bounds.ExchangeSpace.0.CodedSorting.Construction.ExchangeSpace.fixedNat`
+
+下面给出此项的参数类型和完整定义表达式。表达式中使用的项目名称全部列在“继续展开”中；基础库运算见基础概念说明。
+
+[源码位置](ExchangeSpace.lean#L129)
+
+**类型**
+
+```lean
+ℕ → ℕ
+```
+
+**定义**
+
+```lean
+fun n => Classical.choose ⋯
+```
+
+**继续展开**
+
+- [_private.CodedSorting.Interchange.Bounds.ExchangeSpace.0.CodedSorting.Construction.ExchangeSpace.fixedNat._proof_1](ExchangeSpace.definitions.md#def-c408c9273bf3babe)
+
+**基础库名称**
+
+`Nat`, `Classical.choose`, `Eq`
+
+<a id="def-1d0a16090339cc34"></a>
+## `CodedSorting.Construction.ExchangeSpace.spaceCoefficient`
+
+下面给出此项的参数类型和完整定义表达式。表达式中使用的项目名称全部列在“继续展开”中；基础库运算见基础概念说明。
+
+[源码位置](ExchangeSpace.lean#L138)
+
+**类型**
+
+```lean
+ℕ
+```
+
+**定义**
+
+```lean
+CodedSorting.Construction.ExchangeSpace.fixedNat✝
+  (CodedSorting.Construction.ExchangeSpecialization.radix ^ 2 *
+    (2 *
+        (CodedSorting.Construction.MachineNetworkAdapter.physicalInputs +
+          CodedSorting.Construction.MachineNetworkAdapter.nodes CodedSorting.Construction.TensorFrameNetwork.program) +
+      16))
+```
+
+**继续展开**
+
+- [CodedSorting.Construction.TensorLiftProgram.globalRegDecidableEq](../../Circuit/Composition/TensorLiftProgram.definitions.md#def-15a1fd47fc7a9c44)
+- [CodedSorting.Construction.TensorLiftProgram.GlobalReg](../../Circuit/Composition/TensorLiftProgram.definitions.md#def-e76d203076293c86)
+- [CodedSorting.Construction.TensorFrameNetwork.program](../../Circuit/Composition/TensorFrameNetwork.definitions.md#def-831c8f924acdba89)
+- [CodedSorting.Construction.MachineNetworkAdapter.physicalInputs](../../Circuit/NetworkModel/Adapter.definitions.md#def-61b11b4c2aee2759)
+- [CodedSorting.Construction.MachineNetworkAdapter.nodes](../../Circuit/NetworkModel/Adapter.definitions.md#def-b4406b1e1be178ef)
+- [CodedSorting.Construction.ExchangeSpecialization.radix](ExchangeSpecializationEndpoints.definitions.md#def-b02b8b98752b35b8)
+- [_private.CodedSorting.Interchange.Bounds.ExchangeSpace.0.CodedSorting.Construction.ExchangeSpace.fixedNat](ExchangeSpace.definitions.md#def-82ffbda57af73547)
+
+**基础库名称**
+
+`HMul.hMul`, `Nat.instMonoid`, `Monoid.toNatPow`, `instMulNat`, `instOfNatNat`, `instHAdd`, `HPow.hPow`, `HAdd.hAdd`, `Nat`, `instAddNat`, `instHPow`, `OfNat.ofNat`, `instHMul`
+
+<a id="def-c408c9273bf3babe"></a>
+## `_private.CodedSorting.Interchange.Bounds.ExchangeSpace.0.CodedSorting.Construction.ExchangeSpace.fixedNat._proof_1`
+
+已由 Lean 检查的命题。这里保留它的条件与结论；其中使用的自定义概念继续链接到对应定义。
+
+[源码位置](ExchangeSpace.lean)
+
+**类型**
+
+```lean
+∀ (n : ℕ), ∃ m, m = n
+```
+
+此声明没有进一步的项目自定义依赖。
+
+**基础库名称**
+
+`Exists`, `Nat`, `Eq`

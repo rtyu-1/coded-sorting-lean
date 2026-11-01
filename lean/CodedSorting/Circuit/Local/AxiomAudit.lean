@@ -1,0 +1,11 @@
+import CodedSorting.Circuit.Parameters.Counts
+import CodedSorting.Interchange.Local.CoordinatePartialSwap
+
+#print axioms CodedSorting.Construction.streamCount_eq
+#print axioms CodedSorting.Construction.rankBudget_eq
+#print axioms CodedSorting.Construction.budget_add_deficit
+#print axioms CodedSorting.Construction.deficit_fraction_exact
+#print axioms CodedSorting.Construction.epsilon_log_bound_lt_deficit
+#print axioms CodedSorting.Construction.epsilon_margin_exact
+#print axioms CodedSorting.Construction.coordinatePartialSwap_involutive
+#print axioms CodedSorting.Construction.coordinatePartialSwap_commute

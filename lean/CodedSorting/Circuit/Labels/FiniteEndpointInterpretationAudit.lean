@@ -1,0 +1,8 @@
+import CodedSorting.Circuit.Labels.FiniteInterpretation
+
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_source_start
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_source_end
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_target_start
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_target_end
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_helper_start
+#print axioms CodedSorting.Construction.FiniteEndpointInterpretation.checked_helper_end

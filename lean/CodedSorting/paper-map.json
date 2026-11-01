@@ -1,0 +1,334 @@
+{
+  "schema": 1,
+  "paper_url": "https://arxiv.org/abs/2610.20079",
+  "number_source": "Numbered results in the English and Chinese manuscripts.",
+  "results": [
+    {
+      "number": "3.1",
+      "kind": "定理",
+      "label": "thm:sorting",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Theorem31/Theorem.lean",
+      "relation": "最终完整命题",
+      "kind_en": "Theorem",
+      "relation_en": "Complete final statement",
+      "correspondence": "main_theorem",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "External-memory integer sorting",
+      "title_zh": "外存整数排序"
+    },
+    {
+      "number": "3.2",
+      "kind": "定理",
+      "label": "thm:network",
+      "guide": "NetworkCoding/Theorem32/README.md",
+      "lean_entry": "NetworkCoding/Theorem32/Theorem.lean",
+      "relation": "最终完整命题",
+      "kind_en": "Theorem",
+      "relation_en": "Complete final statement",
+      "correspondence": "main_theorem",
+      "guides": {
+        "en": "NetworkCoding/Theorem32/README.md",
+        "zh-CN": "NetworkCoding/Theorem32/README.zh-CN.md"
+      },
+      "title_en": "A strict coding advantage in undirected multiple-unicast networks",
+      "title_zh": "无向多单播网络上的编码优势"
+    },
+    {
+      "number": "5.1",
+      "kind": "引理",
+      "label": "lem:local-interface",
+      "guide": "Circuit/README.md",
+      "lean_entry": "Circuit/Local/ConcreteLocalProgram.lean",
+      "relation": "局部语义、子空间、端点与复制条件由多个声明共同给出",
+      "kind_en": "Lemma",
+      "relation_en": "Local semantics, subspaces, endpoints, and copy conditions are supplied by several declarations",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Circuit/README.md",
+        "zh-CN": "Circuit/README.zh-CN.md"
+      },
+      "title_en": "Properties of the local circuit",
+      "title_zh": "基础小电路的性质"
+    },
+    {
+      "number": "5.2",
+      "kind": "引理",
+      "label": "lem:finite-coding",
+      "guide": "Circuit/README.md",
+      "lean_entry": "Circuit/Composition/TensorThreeRound.lean",
+      "relation": "三轮正确性与独立输入计数共同给出",
+      "kind_en": "Lemma",
+      "relation_en": "Three-round correctness together with the independent-input count",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Circuit/README.md",
+        "zh-CN": "Circuit/README.zh-CN.md"
+      },
+      "title_en": "Permutation of the input bits",
+      "title_zh": "输入比特的置换"
+    },
+    {
+      "number": "5.3",
+      "kind": "引理",
+      "label": "lem:finite-labels",
+      "guide": "Circuit/README.md",
+      "lean_entry": "Circuit/Composition/TensorFrameCertifiedBudget.lean",
+      "relation": "结合 TensorFrameNetwork 的端点秩定理",
+      "kind_en": "Lemma",
+      "relation_en": "Combined with the endpoint-rank theorem in TensorFrameNetwork",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Circuit/README.md",
+        "zh-CN": "Circuit/README.zh-CN.md"
+      },
+      "title_en": "Total edge length and ranks of source–sink matrix differences",
+      "title_zh": "总边长与源汇矩阵差的秩"
+    },
+    {
+      "number": "5.4",
+      "kind": "推论",
+      "label": "prop:finite-circuit",
+      "guide": "Circuit/README.md",
+      "lean_entry": "Circuit/Parameters/Exponent.lean",
+      "relation": "实际构造与 strict_exponent_gap 结合；别名 lem:refined-exponent",
+      "kind_en": "Corollary",
+      "relation_en": "Actual construction plus strict_exponent_gap; alias lem:refined-exponent",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Circuit/README.md",
+        "zh-CN": "Circuit/README.zh-CN.md"
+      },
+      "title_en": "Fixed parameters for the recursion",
+      "title_zh": "递归所用的固定参数"
+    },
+    {
+      "number": "6.1",
+      "kind": "引理",
+      "label": "lem:memory-cutoff-interchange",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Interchange/Binary/Normalized.lean",
+      "relation": "排序算法使用的整字后缀 ℓ = S·w。",
+      "kind_en": "Lemma",
+      "relation_en": "Whole-word suffixes ℓ = S·w used by the sorting algorithm.",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Block transfers for address-field interchange",
+      "title_zh": "地址字段交换的块传输次数"
+    },
+    {
+      "number": "6.2",
+      "kind": "引理",
+      "label": "lem:coded-recursion",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Interchange/OneLevel/Exchange.lean",
+      "relation": "complete、child_volume_div、charge_le 与构造的子调用集合",
+      "kind_en": "Lemma",
+      "relation_en": "complete, child_volume_div, charge_le, and the constructed set of child calls",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "One level of the coding recursion",
+      "title_zh": "一层编码递归"
+    },
+    {
+      "number": "6.3",
+      "kind": "引理",
+      "label": "lem:interchange-scales",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Interchange/Recursion/ConfiguredEndpoint.lean",
+      "relation": "complete 与 RecursiveCostRate 的递推费用界",
+      "kind_en": "Lemma",
+      "relation_en": "complete plus the recurrence cost bound in RecursiveCostRate",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Interchange for field width $t_0m^k$",
+      "title_zh": "字段宽度为 $t_0m^k$ 时的交换"
+    },
+    {
+      "number": "7.1",
+      "kind": "命题",
+      "label": "prop:columnsort-reduction",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Local/Columnsort/FiniteColumnsort.lean",
+      "relation": "fourRounds_correct 加 ColumnsortExchange 的地址交换分解",
+      "kind_en": "Proposition",
+      "relation_en": "fourRounds_correct plus the address-interchange decomposition in ColumnsortExchange",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "The Columnsort reduction",
+      "title_zh": "Columnsort 归约"
+    },
+    {
+      "number": "7.2",
+      "kind": "引理",
+      "label": "lem:scalar-local",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Local/CostBound.lean",
+      "relation": "improved_bound 是费用部分；实际运行还使用 CommonLocalMachine",
+      "kind_en": "Lemma",
+      "relation_en": "improved_bound supplies the cost; actual execution also uses CommonLocalMachine",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Local sorting",
+      "title_zh": "局部排序"
+    },
+    {
+      "number": "8.1",
+      "kind": "引理",
+      "label": "lem:digit-partition",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Radix/Partition/Complete.lean",
+      "relation": "complete 给出分桶运行；CommonMSDNodeRate 给出费用",
+      "kind_en": "Lemma",
+      "relation_en": "complete supplies partition execution; CommonMSDNodeRate supplies the cost",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Partitioning by one bit group",
+      "title_zh": "按一个比特组划分"
+    },
+    {
+      "number": "8.2",
+      "kind": "命题",
+      "label": "prop:msd-sorting",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Radix/SortingTrace.lean",
+      "relation": "运行、空间和物理费用分层；结合 CommonIntegerSortingRate",
+      "kind_en": "Proposition",
+      "relation_en": "Execution, space, and physical cost are layered; combined with CommonIntegerSortingRate",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Sorting large inputs",
+      "title_zh": "大规模输入排序"
+    },
+    {
+      "number": "8.3",
+      "kind": "引理",
+      "label": "lem:direct-radix",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/SmallMemory/SmallMemorySorting.lean",
+      "relation": "两种字长分支均给出线性 I/O 和多项式磁盘空间。宽字分支的显式分配界与证明末尾的 O(NB) 字估计有别。",
+      "kind_en": "Lemma",
+      "relation_en": "Both word-width cases give linear I/O and polynomial disk space. The wide-word allocation bound differs from the O(NB)-word estimate at the end of the paper proof.",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "A linear number of individual record accesses",
+      "title_zh": "线性次数的逐条记录访问"
+    },
+    {
+      "number": "A.1",
+      "kind": "引理",
+      "label": "lem:buffered-tape",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Shared/Memory/TapeMachine.lean",
+      "relation": "initialized_controller_transfer_bound 证明单带的三块窗口传输界。论文对固定条数的磁带和各阶段求和，并将位块宽代入为 Bw；排序的 Lean 证明直接构造流扫描程序并证明其执行与费用。",
+      "kind_en": "Lemma",
+      "relation_en": "initialized_controller_transfer_bound proves the three-block-window transfer bound for one tape. The paper sums over a fixed number of tapes and over stages, substituting Bw for the bit-block width; the Lean sorting proof directly constructs stream-scan programs and proves their execution and cost.",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Buffered tape simulation",
+      "title_zh": "带缓冲的磁带模拟"
+    },
+    {
+      "number": "A.2",
+      "kind": "引理",
+      "label": "lem:io-normalization",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Shared/Programs/ControlledNormalization.lean",
+      "relation": "run_represents_and_cost 给出模拟；固定资源参数由 CommonSortingNormalization 等模块选择",
+      "kind_en": "Lemma",
+      "relation_en": "run_represents_and_cost supplies simulation; CommonSortingNormalization and related modules choose fixed resources",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Constant-factor block simulation",
+      "title_zh": "常数因子的块模拟"
+    },
+    {
+      "number": "A.3",
+      "kind": "推论",
+      "label": "cor:parameter-transfer",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Sorting/Radix/PhysicalRate.lean",
+      "relation": "factor_transfer、with_scans 与最终参数分支结合。排序界覆盖全部 2B ≤ M；地址字段交换仍要求 M 达到固定阈值 C_abs。",
+      "kind_en": "Corollary",
+      "relation_en": "factor_transfer and with_scans combine with the final parameter cases. The sorting bounds cover all 2B ≤ M; address-field interchange still requires M to reach the fixed threshold C_abs.",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Extension to general parameters",
+      "title_zh": "推广至一般参数"
+    },
+    {
+      "number": "B.1",
+      "kind": "引理",
+      "label": "lem:exact-exponent",
+      "guide": "Circuit/README.md",
+      "lean_entry": "Circuit/Parameters/Exponent.lean",
+      "relation": "epsilon_log_lt_eta 直接给出不等式",
+      "kind_en": "Lemma",
+      "relation_en": "epsilon_log_lt_eta directly gives the inequality",
+      "correspondence": "direct_inequality",
+      "guides": {
+        "en": "Circuit/README.md",
+        "zh-CN": "Circuit/README.zh-CN.md"
+      },
+      "title_en": "Parameter inequality",
+      "title_zh": "参数不等式"
+    },
+    {
+      "number": "C.1",
+      "kind": "引理",
+      "label": "lem:arbitrary-fields",
+      "guide": "Sorting/Theorem31/README.md",
+      "lean_entry": "Interchange/Fields/MachineBound.lean",
+      "relation": "程序执行的块传输次数上界针对后缀长度为字长整数倍的数组，填充时补齐合并后的前缀行数。",
+      "kind_en": "Lemma",
+      "relation_en": "The bound on block transfers during program execution uses suffixes containing a whole number of words and pads the combined prefix rows.",
+      "correspondence": "assembled",
+      "guides": {
+        "en": "Sorting/Theorem31/README.md",
+        "zh-CN": "Sorting/Theorem31/README.zh-CN.md"
+      },
+      "title_en": "Interchange for arbitrary field widths and prefix counts",
+      "title_zh": "一般字段宽度与前缀段数下的交换"
+    }
+  ],
+  "label_aliases": {
+    "lem:refined-exponent": "prop:finite-circuit",
+    "lem:memory-cutoff-swap": "lem:memory-cutoff-interchange"
+  }
+}

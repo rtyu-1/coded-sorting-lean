@@ -1,0 +1,7 @@
+.lake/
+reports/
+__pycache__/
+*.pyc
+logs/parallel_build/
+logs/snapshots/
+logs/restore-pinned-*/

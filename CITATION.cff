@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this formalization."
+title: "Coded Sorting: Lean proofs for undirected multiple-unicast network coding and external-memory integer sorting"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Sirui
+repository-code: "https://github.com/rtyu-1/coded-sorting-lean"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Undirected Multiple-Unicast Network Coding and Faster External-Memory Integer Sorting"
+  authors:
+    - family-names: Li
+      given-names: Baochun
+    - family-names: Li
+      given-names: Zongpeng
+    - family-names: Liu
+      given-names: Sirui
+  year: 2026
+  doi: "10.48550/arXiv.2610.20079"
+  url: "https://arxiv.org/abs/2610.20079"

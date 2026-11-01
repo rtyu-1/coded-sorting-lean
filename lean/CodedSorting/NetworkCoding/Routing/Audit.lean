@@ -1,0 +1,8 @@
+import CodedSorting.NetworkCoding.Routing.StrictGap
+
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simplePhysicalEdgeEquiv
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simpleBlockCode
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simple_coding_capacity
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simple_routing_capacity_le
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simple_network_separation
+#print axioms CodedSorting.Construction.SimpleNetworkSeparation.simple_finite_strict_block

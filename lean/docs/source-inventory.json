@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "scope": "CodedSorting/**/*.lean; includes comments and blank lines; excludes dependencies and root entry files",
+  "total": {
+    "files": 424,
+    "lines": 198078
+  },
+  "generated": {
+    "files": 89,
+    "lines": 81270
+  },
+  "other": {
+    "files": 335,
+    "lines": 116808
+  },
+  "default_import_closure_including_root": 401
+}

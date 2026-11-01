@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "description": "Definitions relating the two main theorem statements to inputs, execution, resources, and communication rates.",
+  "paper_url": "https://arxiv.org/abs/2610.20079",
+  "items": [
+    {
+      "id": "S1",
+      "source": "CodedSorting/Sorting/Theorem31/Theorem.lean",
+      "declarations": "hN/hB/hBM/hMN; complete",
+      "explanation_zh": "2B≤M≤N 与 N≥2、B>0 均在公开声明；Mcut 的两分支穷尽。",
+      "explanation_en": "the public statement contains all size premises; the two Mcut branches are exhaustive."
+    },
+    {
+      "id": "S2",
+      "source": "CodedSorting/Shared/Words/WordConvention.lean",
+      "declarations": "Covers; GeneralWordSorting.complete",
+      "explanation_zh": "固定 c、κ 后，Covers 给出地址字数下界，hword 给出字长上界；常数先于规模固定。",
+      "explanation_en": "fixed c and kappa bound word width on both sides; constants are fixed before varying size."
+    },
+    {
+      "id": "S3",
+      "source": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "declarations": "NormalGuarantee; SmallGuarantee",
+      "explanation_zh": "程序先由规模参数确定，再要求它对任意输入和临时存储内容都成立。执行长度可随运行过程变化。",
+      "explanation_en": "The program is fixed by the size parameters and must then work for every input and every initial content of temporary storage. The execution length may vary with the run."
+    },
+    {
+      "id": "S4",
+      "source": "CodedSorting/Sorting/SmallMemory/SmallSort.lean",
+      "declarations": "File; CommonIntegerPhysical.InputFile",
+      "explanation_zh": "输入条件给出长度和 w 比特整数的磁盘存储格式。",
+      "explanation_en": "Input conditions give the length and disk encoding of w-bit words."
+    },
+    {
+      "id": "S5",
+      "source": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "declarations": "NormalGuarantee; SmallGuarantee",
+      "explanation_zh": "同一最终磁盘写出同一个 output xs，同时具有 Perm 与 Pairwise；重复元素的次数得到保留。",
+      "explanation_en": "the same final disk contains output xs, with both Perm and Pairwise, preserving multiplicities."
+    },
+    {
+      "id": "S6",
+      "source": "CodedSorting/Shared/Memory/NormalizationController.lean",
+      "declarations": "step; run; TwoWordSmallMemorySorting.Executes",
+      "explanation_zh": "run 累积每一步费用，正常分支给出有限 fuel 和停止状态；小分支的 Executes 是有限推导，输出与费用连接同一个 s→t。",
+      "explanation_en": "run accumulates step costs; the normal case has finite fuel and a stopped state, and the small case uses a finite Executes derivation for the same initial/final states and cost."
+    },
+    {
+      "id": "S7",
+      "source": "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean",
+      "declarations": "ResidentIndex; SourceState; SmallGuarantee",
+      "explanation_zh": "普通内存情形计入缓冲区、目录、保存调用的记录和控制字。小内存情形使用两个 B 字缓冲区；窄字长执行位置采用模型页说明的约定。",
+      "explanation_en": "Normal memory counts buffers, directories, saved-call frames, and control words. Small memory uses two B-word buffers; the narrow-word execution position follows the convention in Model.md."
+    },
+    {
+      "id": "S8",
+      "source": "CodedSorting/Sorting/SmallMemory/PublicUnrolledBlockSort.lean",
+      "declarations": "BoundedCode; code_bound; polynomial_words; smallSpaceBound",
+      "explanation_zh": "BoundedCode 限制实际读写的磁盘地址；即使地址由缓冲区内容计算，也要求所有可能的缓冲区内容都得到范围内的地址；磁盘块数乘 B 才换算成字数，指数只依赖固定字长常数。",
+      "explanation_en": "BoundedCode covers actual accessed addresses, including arbitrary buffer contents; blocks are multiplied by B to count words, with exponent depending only on fixed word-width constants."
+    },
+    {
+      "id": "S9",
+      "source": "CodedSorting/Sorting/Theorem31/Proof.lean",
+      "declarations": "coefficient; factor_eq; normal_complete; small_complete",
+      "explanation_zh": "同一次执行的 result.2/cost 满足复杂度上界，coefficient 只依赖 c、κ。因为分母两个指数之和为 1，统一改变对数底数时，分子和分母的换底因子抵消。",
+      "explanation_en": "The same execution cost, result.2/cost, satisfies the bound; coefficient depends only on c and kappa. Changing the logarithm base multiplies numerator and denominator by the same factor because the denominator exponents sum to one."
+    },
+    {
+      "id": "N1",
+      "source": "CodedSorting/NetworkCoding/Theorem32/Coding.lean",
+      "declarations": "network; graph; physicalEdgeEquiv",
+      "explanation_zh": "代码用有限类型具体定义网络的顶点和边；physicalEdgeEquiv 证明这些边与对应简单图的边一一对应。协议每边每轮一比特，路由每边容量为 1。",
+      "explanation_en": "Finite types define the network vertices and edges explicitly; physicalEdgeEquiv gives a bijection with the edges of the corresponding simple graph. Coding permits one bit per edge per round and routing uses unit edge capacities."
+    },
+    {
+      "id": "N2",
+      "source": "CodedSorting/NetworkCoding/Routing/StrictGap.lean",
+      "declarations": "sessions_positive; simple_achievable_le_one; BlockCode.correct",
+      "explanation_zh": "正确性对非空会话集合中所有独立原始消息的任意取值成立，每个会话的源点与目的点不同。",
+      "explanation_en": "Correctness holds for every assignment of independent original messages to the nonempty set of sessions. Each source differs from its destination."
+    },
+    {
+      "id": "N3",
+      "source": "CodedSorting/NetworkCoding/Model/NetworkRates.lean",
+      "declarations": "BlockCode.initial; NetworkCut.message/step/run",
+      "explanation_zh": "初始化使用本地源消息；发送使用发送者状态，更新使用关联边上的消息。发送安排由时间和边确定。",
+      "explanation_en": "Initialization uses local sources; transmissions use the sender state and updates use incident-edge messages. The schedule is determined by time and edge."
+    },
+    {
+      "id": "N4",
+      "source": "CodedSorting/NetworkCoding/FiniteCodes/BinaryLinearPipeline.lean",
+      "declarations": "BinaryLinearBlock; finiteLinearBlock_linear",
+      "explanation_zh": "初始化、发送、更新、译码四项线性性属于同一个实际 BlockCode；correct 是对每个输入的零差错译码。",
+      "explanation_en": "all four linearity conditions concern the same actual BlockCode; correctness is zero-error decoding for every input."
+    },
+    {
+      "id": "N5",
+      "source": "CodedSorting/NetworkCoding/Theorem32/Coding.lean",
+      "declarations": "coding_capacity_eq_one; binary_linear_rates_approach_one",
+      "explanation_zh": "所有允许的通信协议的速率都不超过 1，因此二元线性编码也满足这一上界。对每个 r<1，代码都构造了速率大于 r 的二元线性编码，所以二元线性编码的容量恰好为 1。",
+      "explanation_en": "Every permitted communication protocol has rate at most 1, so binary linear codes satisfy the same bound. For every r<1, the construction gives a binary linear code with rate greater than r. Their capacity is therefore exactly 1."
+    },
+    {
+      "id": "N6",
+      "source": "CodedSorting/NetworkCoding/Model/NetworkRates.lean",
+      "declarations": "Routable; Walk.edges; routingCapacity",
+      "explanation_zh": "非负流量在两个方向上共用边容量。代码允许的游走包含源宿路径，因此其上界适用于分数路径路由。",
+      "explanation_en": "Nonnegative flows share edge capacity across both directions. The walk formulation includes source-to-destination paths, so its upper bound applies to fractional path routing."
+    },
+    {
+      "id": "N7",
+      "source": "CodedSorting/NetworkCoding/Theorem32/Proof.lean",
+      "declarations": "network_coding_result; physical_rank_budget",
+      "explanation_zh": "编码和路由使用同一网络、同一组源宿点对。总边长由所构造电路中各条连线两端矩阵差的秩求和得到。",
+      "explanation_en": "Coding and routing use the same network and source–destination pairs. The total edge length is obtained by summing the ranks of endpoint-matrix differences across the constructed circuit."
+    },
+    {
+      "id": "N8",
+      "source": "CodedSorting/NetworkCoding/Theorem32/FiniteCode.lean",
+      "declarations": "strictBlock_rate_gt_gap; paperPackets_eq; paper_finite_block",
+      "explanation_zh": "有限二元线性编码的速率超过 1−33/338432；取整公式版本给出相应的有限块长。",
+      "explanation_en": "The finite binary linear code has rate above 1−33/338432. The ceiling formula specifies a finite block length that achieves this rate."
+    }
+  ],
+  "source_sha256": {
+    "CodedSorting/NetworkCoding/FiniteCodes/BinaryLinearPipeline.lean": "cba44aef5666e72d71279fa0a3107ca89b476902698afc22dfb1beb58f2d0c33",
+    "CodedSorting/NetworkCoding/Model/NetworkRates.lean": "1aea2ee00fec0e067c95e885c46d412f5abe29846e339ef1e85216ca78df81a0",
+    "CodedSorting/NetworkCoding/Routing/StrictGap.lean": "50ca9bbba48aaa0b1bfd42f6256973df9e9b20f7f47622afbd7b2f5e756ab5ff",
+    "CodedSorting/NetworkCoding/Theorem32/Coding.lean": "29ecf3d7590434ab435c95c8222bf3068593a87b1da6c0b072d4628d38e7d519",
+    "CodedSorting/NetworkCoding/Theorem32/FiniteCode.lean": "702a46dff242b523104215d1633f4684e463a41b1bb9ae1d2a8045501ab54a4c",
+    "CodedSorting/NetworkCoding/Theorem32/Proof.lean": "f79e3aeaf2d27a2da607143e0506f6dc08dbffd792062366d27e87ff01a1ef85",
+    "CodedSorting/NetworkCoding/Theorem32/Theorem.lean": "c80d815d8d957d781e06ccf5efb5dded8b2da41e61d0786a1864a2e34fcc9b86",
+    "CodedSorting/Shared/Memory/NormalizationController.lean": "9afd7cc48314412c3cf121601dc9151684f7c7be91bfe8392054eb723240de94",
+    "CodedSorting/Shared/Words/WordConvention.lean": "28c6fd10e07a372ed9da4d4959b586dbc5d33d6a639cb3bac3b67d1c93f3bba3",
+    "CodedSorting/Sorting/Resources/Framework/NormalizationFrames.lean": "4d7fe70f1b401b0dd40355da77eb04273b9dc3e823a86736cbec48521360f57d",
+    "CodedSorting/Sorting/SmallMemory/PublicUnrolledBlockSort.lean": "e198287f336caf20a9b4a13a4077e8d24c4c575ab3f8ebb797c874265b160a4e",
+    "CodedSorting/Sorting/SmallMemory/SmallSort.lean": "1189faa0e4d31f8800e13a728bb94d33e1271a239815a1adaa89e581499928e9",
+    "CodedSorting/Sorting/Theorem31/Proof.lean": "ba6e2bc13fd85aa0576896c02e47e143831f289b55ff9c073078c48f7b9e2feb",
+    "CodedSorting/Sorting/Theorem31/Theorem.lean": "3f216144c293b80bc063d207ccc96f4875a381d3d9c87beb5f2ed0fcfff98e00"
+  }
+}

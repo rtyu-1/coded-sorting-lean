@@ -1,0 +1,9 @@
+import CodedSorting.Circuit.Composition.TensorLiftProgram
+
+#print axioms CodedSorting.Construction.ThreeCopySchedule.every_block_has_one_pool
+#print axioms CodedSorting.Construction.ThreeCopySchedule.roundTwo_processes_pool_coordinate
+#print axioms CodedSorting.Construction.ThreeCopySchedule.roundThree_processes_pool_coordinate
+#print axioms CodedSorting.Construction.ThreeCopySchedule.pool_count
+#print axioms CodedSorting.Construction.ThreeCopySchedule.helper_count
+#print axioms CodedSorting.Construction.ThreeCopySchedule.invocation_count
+#print axioms CodedSorting.Construction.ThreeCopySchedule.independent_stream_count

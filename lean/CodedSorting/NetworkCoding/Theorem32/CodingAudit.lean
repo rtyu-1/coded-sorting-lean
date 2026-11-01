@@ -1,0 +1,11 @@
+import CodedSorting.NetworkCoding.Theorem32.Coding
+
+#print axioms CodedSorting.Construction.NetworkCodingResult.physicalEdgeEquiv
+#print axioms CodedSorting.Construction.NetworkCodingResult.forward_verified
+#print axioms CodedSorting.Construction.NetworkCodingResult.middle_verified
+#print axioms CodedSorting.Construction.NetworkCodingResult.linearCode_correct
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock_linear
+#print axioms CodedSorting.Construction.NetworkCodingResult.finiteLinearBlock_direction
+#print axioms CodedSorting.Construction.NetworkCodingResult.coding_capacity_eq_one
+#print axioms CodedSorting.Construction.NetworkCodingResult.binary_linear_rates_approach_one
