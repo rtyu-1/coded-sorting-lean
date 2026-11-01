@@ -6,7 +6,7 @@ import CodedSorting.Sorting.Local.Framework.PhysicalLocalSortTranspose
 section GlobalSortingBound
 /-! The integer radix depth and the final logarithmic algebra for the actual
 Columnsort/MSD composition. The address-exchange implementation retains its
-explicit primitive contract; this is not a physically closed main theorem. -/
+explicit primitive contract in this trace-cost composition. -/
 set_option autoImplicit false
 namespace CodedSorting.GlobalSortingBound
 open LocalShape LocalSortingCost GroupedNearMemory
@@ -358,10 +358,10 @@ section ActualShapeSortingBound
 at its actual nonterminal local shapes.  This module narrows that interface
 without changing either the sorting function or its trace cost.
 
-This is the coarse main-theorem composition through `LocalToMSD`, not the
-separate grouped near-memory implementation.  The latter has exchange volume
-`sizeChoice n ^ 4 * g` and needs its corresponding scaled-shape contract.
-No theorem here claims a finite-RAM or common-disk realization. -/
+This is the coarse trace-cost composition through `LocalToMSD`. The grouped
+near-memory implementation uses exchange volume `sizeChoice n ^ 4 * g`
+and its corresponding scaled-shape contract. Finite-RAM and common-disk
+realization are handled by the physical implementation modules. -/
 
 set_option autoImplicit false
 namespace CodedSorting.ActualShapeSortingBound

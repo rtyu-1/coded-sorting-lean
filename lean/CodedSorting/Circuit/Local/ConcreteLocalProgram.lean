@@ -6,8 +6,8 @@ import CodedSorting.Generated.FiniteCircuit.GateSegments
 
 This file binds the exact 5583-gate finite data to the physical local-word
 consumer. The nine copies are inserted at the declared scatter boundary.
-Payload replay remains an explicit premise until the separate SSA proof is
-complete. No arbitrary function is substituted for a physical gate.
+Payload replay is an explicit certificate parameter, instantiated by
+`scalarCoefficientReplay` in `NetworkCoding/Theorem32/Coding.lean`.
 -/
 
 set_option autoImplicit false

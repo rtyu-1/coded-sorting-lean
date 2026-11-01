@@ -10,8 +10,8 @@ reload, and execution.  The infinite function is the external disk, not RAM;
 RAM holds exactly `3 * B` symbols and a fixed number of position counters.
 The reconstructed tape `view` is a specification, never a stored array.
 
-This is a simulator for a given adjacent-head tape program. It does not assert
-that the paper's matrix permutations have such an efficient tape program.
+The simulator takes an adjacent-head tape program as input and bounds its
+cache transfers in terms of that program's tape execution.
 -/
 
 namespace CodedSorting.TapeMachine

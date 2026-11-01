@@ -4,9 +4,9 @@ import CodedSorting.Shared.Records.KeyRecordWords
 
 /-! One fixed reserve constant for the actual normalization controller,
 three-word sorting records, three complete file directories, three live call
-frames, and addressed stream residents. This module only certifies the
-explicit resident layout instantiated below; it does not assert that the
-whole sorting algorithm already runs on that layout. -/
+frames, and addressed stream residents. The lemmas certify the resident
+layout instantiated below and its numerical capacity bounds. Execution
+on this layout is handled by the sorting implementation modules. -/
 set_option autoImplicit false
 namespace CodedSorting.SortingResourceBudget
 

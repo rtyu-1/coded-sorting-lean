@@ -7,7 +7,7 @@ exchange. The program keeps its original finite machine and executes real
 borrowing, padding, chunk exchange, erasure and restoration instructions.
 The normalized interface still exposes source separation and finite disk/
 program-counter obligations; the capacity lemmas establish numerical bounds.
-This audit alone does not assert completion of the full sorting theorem. -/
+These endpoints audit the arbitrary-width exchange component used by sorting. -/
 
 namespace CodedSorting.Construction.ArbitraryExchangeAudit
 

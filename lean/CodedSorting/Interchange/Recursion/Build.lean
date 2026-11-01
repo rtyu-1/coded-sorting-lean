@@ -12,7 +12,7 @@ with the old circuit's radix is assumed. The gather returns the exchanged file
 to the original source, and both transfers are included in the charge.
 
 Resident bucket capacity and a disjoint finite disk arena are explicit numeric
-requirements. This file does not assert that a whole recursion has that space.
+requirements for each leaf; recursive workspace is accounted for separately.
 -/
 
 set_option autoImplicit false

@@ -4,7 +4,7 @@ import CodedSorting.Interchange.Recursion.ConfiguredEndpoint
 machine parameters. This audit covers selected leaf parameters, exact root
 layout, fixed disk and program-counter capacity, descendant readiness,
 explicit PC initialization, and the same controlled run with the improved
-fee bound. It does not assert arbitrary-shape exchange or full sorting. -/
+fee bound for the canonical recursive exchange. -/
 
 namespace CodedSorting.Construction.RecursiveEndpointAudit
 

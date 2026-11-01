@@ -13,8 +13,8 @@ selected sessions. Correctness needs to be proved only at those sinks.
 The routing interface accepts full-rank endpoint differences. In particular,
 an idempotent matrix `P` gives a full-rank difference `1 - 2 • P`.
 
-These are reusable interfaces. This file does not assert that a concrete Construction
-program has the claimed rank budget or that the final separation is proved.
+These reusable interfaces connect session restrictions and endpoint ranks
+to coding and routing bounds for a supplied physical program.
 -/
 
 set_option autoImplicit false

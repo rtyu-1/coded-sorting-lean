@@ -8,11 +8,11 @@ nine temporary registers. Temporaries are numbered 661 through 669 and copy
 the retained helpers numbered 472 through 480 immediately before scatter.
 
 The correctness theorem consumes both the scalar replay certificate and an
-exact decomposition of that word into before/scatter/after. These premises
-are explicit: this module does not assert that the large finite replay or
-the concrete word decomposition has already been checked. Matrix labeling,
-rank cost 63 for moving the nine rank-seven copies, and tensor composition
-are additional obligations.
+exact decomposition of that word into before/scatter/after. The concrete
+decomposition is supplied by `ConcreteLocalProgram`, and the replay is
+instantiated in `Theorem32/Coding.lean`. Matrix labeling, rank cost 63
+for moving the nine rank-seven copies, and tensor composition are handled
+by the corresponding labeling and composition modules.
 -/
 
 set_option autoImplicit false

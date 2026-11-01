@@ -6,12 +6,12 @@ import CodedSorting.Generated.FiniteCircuit.RegisterTrace.Replay
 /-!
 # Concrete coding half of theorem 3.2
 
-This file requires the complete literal scalar replay and binds it to the
+This file uses the complete literal scalar replay certificate to verify the
 expanded three-round physical program. The network has exactly the original
 independent streams as its sessions. The finite witness is certified linear
 in all four operational functions by `BinaryLinearBlock`.
 
-No routing or rank-budget conclusion is claimed in this module.
+The routing bound is combined with this coding result in `Theorem32/Proof.lean`.
 -/
 
 set_option autoImplicit false

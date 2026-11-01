@@ -1,8 +1,8 @@
 import CodedSorting.Interchange.Recursion.CallBridge
 
-/-! Final axiom audit for stage 2, step 1: admissible actual-call closure,
-explicit allocation conditions, and an instruction-preserving adapter.
-This does not assert a complete recursive tree or its global space bound. -/
+/-! Axiom audit for admissible actual-call closure and its adapter.
+The endpoints retain explicit allocation conditions and preserve the
+underlying instructions when adapting a child call. -/
 
 #print axioms CodedSorting.Construction.RecursiveCallShape.depthCall_shape
 #print axioms CodedSorting.Construction.RecursiveCallShape.parentForm_eq

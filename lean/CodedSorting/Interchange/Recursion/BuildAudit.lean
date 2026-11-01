@@ -4,7 +4,7 @@ import CodedSorting.Interchange.Recursion.Workspace
 /-! Axiom endpoint for the actual recursive Construction builder and its terminating
 paths. The audit includes numerical-condition projections, actual-child
 descent, concrete branch code/charge provenance, and controlled execution.
-It does not assert uniform workspace or the final asymptotic cost bound. -/
+These endpoints audit the builder's control flow and execution contracts. -/
 
 namespace CodedSorting.Construction.RecursiveBuildAudit
 

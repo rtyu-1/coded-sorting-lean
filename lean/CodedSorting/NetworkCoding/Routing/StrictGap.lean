@@ -2,16 +2,16 @@ import CodedSorting.Circuit.Composition.TensorNetworkGeometry
 import CodedSorting.NetworkCoding.Model.PipelineBlockCode
 
 /-!
-# Operational theorem-2.2 endpoint for the Construction program
+# Operational network separation for the Construction program
 
 The graph, messages, local code, block code and routing upper bound below all
 refer to the same expanded three-round physical program. Temporary registers
 are physical storage only; the session type is exactly the original streams.
 
-This module exposes the remaining concrete proof inputs: correctness of the
-three local words, the source/terminal equations of a complete vertex label,
-and its actual edge-rank budget. The final concrete certificate must supply
-these inputs; the theorem here does not claim they have already been supplied.
+The separation interface takes correctness of the three local words, the
+source/terminal equations of a complete vertex label, and its edge-rank budget.
+The concrete coding certificates are supplied in `Theorem32/Coding.lean`;
+`TensorFrameCertifiedBudget` certifies the physical geometry budget.
 -/
 
 set_option autoImplicit false
@@ -178,7 +178,7 @@ theorem simple_routing_capacity_le
     (simple_routable_bound _ _ _ _ label hsource hterminal hbudget)
 
 include hsource hterminal in
-/-- The theorem-2.2 conclusion with all unfinished concrete inputs explicit. -/
+/-- Network separation from local correctness, endpoint equations, and an edge-rank budget. -/
 theorem simple_network_separation
     (hOne : LocalCorrect wordOne) (hTwo : LocalCorrect wordTwo) (hThree : LocalCorrect wordThree)
     (hbudget : (∑ e, edgeLength (baseNetwork wordOne wordTwo wordThree pi) label e) ≤ rankBudget) :
